@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+{{ key01 }} <br/>
+字典:{{ my_dict.name2 }} <br/>
+对象:{{ my_obj.name }} <br/>
+列表:{{ my_list.1 }} <br/>
+
+<h2>内置标签</h2>
+{% for l in my_list reversed%}
+    {{ l }} <br/>
+{% empty %}
+    列表是空的
+{% endfor %}
+
+{% for key,value in my_dict.items %}
+    {{ key }}:{{ value }} <br>
+{% endfor %}
+
+{% for element in my_list %}
+    {{ forloop.counter }}----{{ element }} <br/>
+{% endfor %}
+
+{% for element in my_list %}
+    {% if forloop.counter == 1 %}
+        1-----{{ element }}<br>
+    {% elif forloop.counter == 2 %}
+        2-----{{ element }}<br>
+    {% else %}
+        3-----{{ element }}<br>
+    {% endif %}
+
+{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器</title>
+</head>
+<body>
+<h3>length</h3>
+列表的长度：{{ my_list|length }}<br>
+字典的长度：{{ my_dict|length }}<br>
+字符串的长度：{{ my_obj.name|length }}<br>
+
+<h4>default</h4>
+{{ key01|default:10 }}<br>
+{{ key02|default:10 }}<br>
+
+<h5>date</h5>
+显示日期：<br>
+{{ my_date|date:'Y-m-d H-i-s' }}
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html转义</title>
+</head>
+<body>
+通过render函数设置的字符是会转义的：<br>
+{{ my_html }}<br>
+通过safe过滤器关闭转义：<br>
+{{ my_html|safe }}<br>
+通过autoescape标签关闭转义：<br>
+{% autoescape off %}
+    {{ my_html }} {{ my_html }} {{ my_html }}<br>
+{% endautoescape %}
+html界面中硬编码不会默认转义：<br>
+{{ aa|default:'<font color="red">红色</font>' }}<br>
+手动转义：<br>
+{{ aa|default:'<font color="red">红色</font>' }}
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'parent.html' %}
+
+{% block title %}
+    子模板
+{% endblock title %}
+
+{% block header %}
+    {{ block.super }}
+    <h3>子模板的头部</h3>
+{% endblock header %}
+
+{% block footer %}
+    {{ block.super }}
+    <h3>子模板的尾部</h3>
+{% endblock footer %}
+
+</body>
+</html>
